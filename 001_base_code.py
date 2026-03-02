@@ -9,4 +9,4 @@ import matplotlib.pyplot as plt
 cam, pos = tp.tp_init()
 
 #%% Move around positioner
-pos.goto_absolute(0,0)
+pos.goto_relative(0,0)
