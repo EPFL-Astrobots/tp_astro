@@ -16,7 +16,7 @@ def tp_init(comBus = None):
 
     cam = classCamera.Camera(cameraType = DEFINES.PC_CAMERA_TYPE_XY)
     cam.setMaxROI()
-    exposure_time = cam.getOptimalExposure(exposure_time)
+    #exposure_time = cam.getOptimalExposure(exposure_time)
     config = classConfig.Config()
     cam.setDistortionCorrection(config)
 
@@ -42,5 +42,5 @@ def tp_init(comBus = None):
         id = broadcast.get_id()
         pos = positioner.Positioner(bus, id)
         pos.set_precision_mode_off()
-        pos.set_speed(3000, 3000)
+        pos.set_speed(1000, 3000)
     return cam, pos
